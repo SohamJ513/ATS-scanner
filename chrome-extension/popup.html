@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian ATS Scanner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1 class="title">🇮🇳 ATS Scanner</h1>
+      <span class="version">v1.0</span>
+    </div>
+
+    <!-- Job Info Section -->
+    <div id="jobInfoSection" class="section">
+      <div class="job-header">
+        <h3 id="jobTitle">Loading job...</h3>
+        <span id="jobCompany" class="company"></span>
+      </div>
+      <div id="jobLocation" class="location"></div>
+      <div id="jobDescription" class="description"></div>
+    </div>
+
+    <!-- Resume Section -->
+    <div id="resumeSection" class="section">
+      <div class="section-header">
+        <h3>📄 Your Resume</h3>
+        <button id="changeResumeBtn" class="small-btn">Change</button>
+      </div>
+      <div id="resumeStatus" class="status">
+        <span id="resumeName">No resume uploaded</span>
+      </div>
+    </div>
+
+    <!-- Upload Section (Hidden by default) -->
+    <div id="uploadSection" class="section hidden">
+      <h3>📤 Upload Resume</h3>
+      <input type="file" id="resumeUpload" accept=".pdf,.docx,.txt">
+      <div class="upload-info">Supports PDF, DOCX, TXT (Max 5MB)</div>
+    </div>
+
+    <!-- Score Section -->
+    <div id="scoreSection" class="section hidden">
+      <div class="score-card">
+        <div class="score-header">
+          <span class="score-label">ATS Score</span>
+          <span id="scoreBadge" class="score-badge"></span>
+        </div>
+        <div class="score-value">
+          <span id="scoreValue">0</span><span class="score-max">/100</span>
+        </div>
+        <div class="score-meter">
+          <div id="scoreFill" class="score-fill" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div class="analysis-grid">
+        <div class="analysis-item">
+          <span class="analysis-label">Skills Found</span>
+          <span id="skillsFound" class="analysis-value">0</span>
+        </div>
+        <div class="analysis-item">
+          <span class="analysis-label">Keywords Missing</span>
+          <span id="keywordsMissing" class="analysis-value">0</span>
+        </div>
+      </div>
+
+      <div id="missingKeywordsSection" class="missing-section">
+        <h4>⚠️ Missing Keywords</h4>
+        <div id="missingKeywordsList" class="keywords-list"></div>
+      </div>
+
+      <div id="companyMatchSection" class="company-section">
+        <h4>🏢 Best Company Match</h4>
+        <div id="companyMatch" class="company-match"></div>
+      </div>
+
+      <div class="actions">
+        <button id="viewFullReportBtn" class="primary-btn">📊 View Full Report</button>
+        <button id="optimizeBtn" class="secondary-btn">📄 Optimize Resume</button>
+      </div>
+    </div>
+
+    <!-- Login/Register Section -->
+    <div id="loginSection" class="section">
+      <div class="login-prompt">
+        <p>Save your scan history and track improvements!</p>
+        <button id="loginBtn" class="primary-btn">Sign In / Register</button>
+        <div class="guest-option">
+          <button id="continueAsGuestBtn" class="text-btn">Continue as Guest</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+      <div class="spinner"></div>
+      <div id="loadingMessage">Analyzing...</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <a href="#" id="openDashboard">Dashboard</a> •
+      <a href="#" id="openSettings">Settings</a> •
+      <a href="#" id="openHelp">Help</a>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

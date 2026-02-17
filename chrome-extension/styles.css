@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 400px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+.version {
+  font-size: 0.7rem;
+  background: rgba(255,255,255,0.2);
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.section {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section-header h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: white;
+}
+
+.job-header {
+  margin-bottom: 8px;
+}
+
+.job-header h3 {
+  font-size: 1.1rem;
+  margin: 0 0 4px 0;
+  color: white;
+}
+
+.company {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.location {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+  max-height: 100px;
+  overflow-y: auto;
+  padding: 8px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#resumeName {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.small-btn {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.small-btn:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.score-card {
+  background: rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.score-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.score-label {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.score-badge {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.2);
+}
+
+.score-badge.excellent { background: #10b981; }
+.score-badge.good { background: #f59e0b; }
+.score-badge.needs-work { background: #ef4444; }
+
+.score-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.score-max {
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(255,255,255,0.7);
+  margin-left: 4px;
+}
+
+.score-meter {
+  height: 8px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.score-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #8b5cf6);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.analysis-item {
+  background: rgba(255,255,255,0.1);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.analysis-label {
+  display: block;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 4px;
+}
+
+.analysis-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.missing-section,
+.company-section {
+  margin-top: 16px;
+}
+
+.missing-section h4,
+.company-section h4 {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: rgba(255,255,255,0.9);
+}
+
+.keywords-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.keyword-tag {
+  background: rgba(239, 68, 68, 0.3);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+}
+
+.company-match {
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-name {
+  font-weight: 600;
+}
+
+.company-score {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.primary-btn,
+.secondary-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.primary-btn {
+  background: white;
+  color: #667eea;
+}
+
+.primary-btn:hover {
+  background: rgba(255,255,255,0.9);
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.secondary-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.login-prompt {
+  text-align: center;
+}
+
+.login-prompt p {
+  margin-bottom: 16px;
+  color: rgba(255,255,255,0.9);
+}
+
+.text-btn {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.text-btn:hover {
+  color: white;
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255,255,255,0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hidden {
+  display: none;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.6);
+}
+
+.footer a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.5);
+}
